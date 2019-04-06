@@ -1,2 +1,31 @@
 test
 https://www.figma.com/file/bFhpttHZoe3bwWSdbIRFS3Gp/Interactive-wall?node-id=9%3A3
+
+test2
+/* wall */
+
+position: absolute;
+width: 338.5px;
+height: 181px;
+left: 82.5px;
+top: 99px;
+
+border: 2px solid #000000;
+
+
+/* Interactive Wall */
+
+position: absolute;
+width: 89px;
+height: 48px;
+left: 12px;
+top: 35px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+text-align: center;
+
+color: #000000;
