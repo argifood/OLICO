@@ -12,8 +12,21 @@ db.getCollection('match').aggregate([
         near: { type: "Point", coordinates: [ -73.98142 , 40.71782 ] },
         key: "location",
         distanceField: "distanceField",
-        query: { "consume": {"$in":["truck"]}, "provide.description": {"$regex":/truck/i} }
+        query: {
+            "consume": {"$in":["chainshow"]},
+            "provide.description": {"$regex":/truck/i},
+            "timeWindow.provide.from": {
+                    "$gte": ISODate("2019-07-14T08:14:00.201Z")                    
+             },
+            "timeWindow.provide.to": {
+                    "$lte": ISODate("2010-07-20T08:14:00.201Z")                    
+             },
+            "timeWindow.provide.from": {
+                    "$gte": ISODate("2019-07-14T08:14:00.201Z")                    
+             },
+            "timeWindow.provide.to": {
+                    "$lte": ISODate("2010-07-20T08:14:00.201Z")                    
+             },
+        }
      }
-   }
-])
 ```
