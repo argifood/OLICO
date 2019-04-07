@@ -19,14 +19,16 @@ db.getCollection('match').aggregate([
                     "$gte": ISODate("2019-07-14T08:14:00.201Z")                    
              },
             "timeWindow.provide.to": {
-                    "$lte": ISODate("2010-07-20T08:14:00.201Z")                    
+                    "$lte": ISODate("2019-07-20T08:14:00.201Z")                    
              },
-            "timeWindow.provide.from": {
+            "timeWindow.consume.from": {
                     "$gte": ISODate("2019-07-14T08:14:00.201Z")                    
              },
-            "timeWindow.provide.to": {
-                    "$lte": ISODate("2010-07-20T08:14:00.201Z")                    
+            "timeWindow.consume.to": {
+                    "$lte": ISODate("2019-07-20T08:14:00.201Z")                    
              },
         }
      }
+   }
+])
 ```
