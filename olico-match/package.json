@@ -1,0 +1,22 @@
+{
+  "name": "olico-match",
+  "version": "0.0.3",
+  "description": "demand offer match logic",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "mocha",
+    "test:dev": "nodemon --watch ./test/ --watch ./index.js --exec npm test"
+  },
+  "author": "alex@systemics.gr",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "3.2.3"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.2",
+    "nodemon": "^1.18.11"
+  }
+}
