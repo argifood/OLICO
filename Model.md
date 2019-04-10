@@ -2,16 +2,16 @@
 equipment
 
 {
-    "_id" : ObjectId("5ca9aab6b4e5d411c2e2eba4"),
+    "_id" : ObjectId,
     "provide" : "truck",
     "brand" : "toyota",
-    "productionDate" : ISODate("2012-07-14T08:14:00.201Z"),
-    "_owner" : ObjectId("5ca9aab6b4e5d411c2e2eba4"),
+    "productionDate" : ISODate,
+    "_owner" : ObjectId,
     "location" : {
         "type" : "Point",
         "coordinates" : [
-            51.50998,
-            -0.1337
+            0,
+            0
         ]
     }
 }
@@ -21,13 +21,13 @@ equipment
 user
 
 {
-    "_id" : ObjectId("5ca9aab6b4e5d411c2e2eba4"),
+    "_id" : ObjectId,
     "name" : "alex",
     "location" : {
         "type" : "Point",
         "coordinates" : [
-            51.50998,
-            -0.1337
+            0,
+            0
         ]
     }
 }
@@ -37,11 +37,11 @@ user
 match
 
 {
-    "_id" : ObjectId("5ca9ae08b4e5d411c2e2ed05"),
-    "_user" : ObjectId("5ca9aab6b4e5d411c2e2eba4"),
+    "_id" : ObjectId,
+    "_user" : ObjectId,
     "provide" : {
-        "_item" : ObjectId("5ca9aab6b4e5d411c2e2eba4"),
-        "description" : "chainshow"
+        "_item" : ObjectId,
+        "description" : "chainsaw"
     },
     "consume" : [
         "truck",
@@ -51,21 +51,24 @@ match
     "location" : {
         "type" : "Point",
         "coordinates" : [
-            51.50998,
-            -0.1337
+            0,
+            0
         ]
     },
     "timeWindow" : {
         "provide" : {
-            "from" : ISODate("2012-07-14T08:14:00.201Z"),
-            "to" : ISODate("2012-07-14T08:14:00.201Z")
+            "from" : ISODate,
+            "to" : ISODate
         },
         "consume" : {
-            "from" : ISODate("2012-07-14T08:14:00.201Z"),
-            "to" : ISODate("2012-07-14T08:14:00.201Z")
+            "from" : ISODate,
+            "to" : ISODate
         }
     },
-    "status" : "open"
+    "status" : {
+      "_pointer": ObjectId,
+      "flag": "open"
+    }
 }
 ```
 

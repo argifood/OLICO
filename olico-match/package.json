@@ -1,0 +1,17 @@
+{
+  "name": "olico-match",
+  "version": "0.0.3",
+  "description": "demand offer match logic",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alex@systemics.gr",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "3.2.3"
+  }
+}

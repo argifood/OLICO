@@ -9,11 +9,11 @@ db.getCollection('match').ensureIndex({location:"2dsphere"});
 db.getCollection('match').aggregate([
 {
      $geoNear: {
-        near: { type: "Point", coordinates: [ -73.98142 , 40.71782 ] },
+        near: { type: "Point", coordinates: [ 0, 0 ] },
         key: "location",
         distanceField: "distanceField",
         query: {
-            "consume": {"$in":["chainshow"]},
+            "consume": {"$in":["chainsaw"]},
             "provide.description": {"$regex":/truck/i},
             "timeWindow.provide.from": {
                     "$gte": ISODate("2019-07-14T08:14:00.201Z")                    
