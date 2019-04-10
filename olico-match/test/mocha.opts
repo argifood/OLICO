@@ -1,0 +1,4 @@
+# mocha.opts
+
+  --require test/flags
+  --require test/index
