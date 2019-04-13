@@ -1,14 +1,18 @@
 {
   "name": "olico-match",
   "version": "0.0.3",
-  "description": "demand offer match logic",
+  "description": "demand offer match logic and objects",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "mocha",
-    "test:dev": "nodemon --watch ./test/ --watch ./index.js --exec npm test"
+    "build": "mkdir ./build",
+    "clean": "rm -rf ./build/*",
+    "test": "mocha ./test/unit/",
+    "test:e2e": "mocha test/e2e",
+    "test:dev": "nodemon --watch ./test/ --watch ../src/ --exec npm test",
+    "mongoup": "mongod --config=./test/e2e/default.conf"
   },
   "author": "alex@systemics.gr",
   "license": "ISC",
