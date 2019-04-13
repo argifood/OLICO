@@ -3,19 +3,20 @@ const assert = require('assert');
 
 function DBRef(option){
 
-  const _dbref = [];
-  option.client.connect(option.url, { useNewUrlParser: true }, function(err, client) {
-    assert.equal(null, err);
-    _dbref.push(client)
-  });
+  const _dbref = option.client;
 
   this.expose = function exposeDBRef(option){
-    return _dbref[0].db(option.db).command(option.command)
+    return _dbref.db(option.db).command(option.command)
   };
 
   this.pipeline = function pipelineDBRef(option){
-    return _dbref[0].db(option.db).collection(option.collection).aggregate(option.stages)
-  }
+    return _dbref.db(option.db).collection(option.collection).aggregate(option.stages)
+  };
+
+  // option.client.connect(option.url, { useNewUrlParser: true }, function(err, clientInstance) {
+  //   assert.equal(null, err);
+  //   return _dbref.push(clientInstance) - 1
+  // })
 
 };
 
@@ -74,9 +75,7 @@ DBRef.prototype.next = function nextDBRef(option){
 
 function createDB(option){
   const createOpt = option || {};
-  !createOpt.url && (createOpt.url='mongodb://localhost:27017');
   !createOpt.client && (new Error('No database client provided.. breaking'));
-
   return new DBRef(createOpt)
 };
 

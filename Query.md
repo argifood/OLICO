@@ -1,5 +1,5 @@
 
-##### Index creation for geospatial queries
+#### Index creation for geospatial queries
 ```javascript
 db.getCollection('match').ensureIndex({location:"2dsphere"});
 ```
